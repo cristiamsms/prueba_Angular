@@ -1,0 +1,62 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Register</mat-card-title>
+      </mat-card-header>
+  
+      <form class="example-form" [formGroup]="registerForm" (ngSubmit)="crearUsuario()"
+
+      >
+  
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input matInput 
+                    placeholder="Nombre"
+                    formControlName="nombre">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput 
+                   placeholder="Apellido"  
+                   formControlName="apellido">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput 
+                   placeholder="Documento de Identidad"
+                   formControlName="doctoIdent">
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+            <input matInput 
+                   placeholder="Email"
+                   formControlName="email"
+                  >
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+            <input matInput 
+                   placeholder="Contraseña" 
+                   type="password"
+                   formControlName="clave">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput
+                   placeholder="Verifica Contraseña" 
+                   type="password"
+                   formControlName="password2">
+          </mat-form-field>
+  
+     
+  
+        </mat-card-content>
+        <div>
+          <p *ngIf="campoNoValido('nombre')" style="color: red;">*El nombre es obligatorio</p>
+          <p *ngIf="campoNoValido('apellido')" style="color: red;">*El apellido es obligatorio</p>
+          <p *ngIf="campoNoValido('doctoIdent')" style="color: red;">*El documento es obligatorio</p>
+          <p *ngIf="campoNoValido('email')" style="color: red;">*Correo invalido</p>
+          <p *ngIf="contrasenasNoValidas()" style="color: red;">*Las contraseñas deben de ser iguales</p>
+        </div>
+        <button mat-stroked-button color="accent" class="btn-block">Register</button>
+        <h5>Ya estas regitrado? <a routerLink="/login">inicia sesion</a></h5>
+      </form>
+    </mat-card>
+  </div>

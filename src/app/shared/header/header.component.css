@@ -1,0 +1,14 @@
+  
+.navbar {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #388E3C;
+    color: white;
+  }
+  
+  span {
+    padding-right: 1rem;
+  }
+  button {
+    margin-right: 1rem;
+  }

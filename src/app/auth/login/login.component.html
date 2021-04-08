@@ -1,0 +1,25 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Log in</mat-card-title>
+      </mat-card-header>
+  
+      <form class="example-form" [formGroup]="loginForm" (ngSubmit)="login()" >
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email"
+                  formControlName="username">
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Contraseña" formControlName="password" type="password">
+          </mat-form-field>
+          <mat-checkbox class="example-margin">Recuerdame</mat-checkbox>
+        </mat-card-content>
+        <button mat-stroked-button color="accent" class="btn-block" type="submit">Log in</button>
+        <h5>No tienes cuenta? <a routerLink="/register">Registrate</a></h5>
+      </form>
+    </mat-card>
+  
+  </div>

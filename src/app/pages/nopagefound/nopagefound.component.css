@@ -1,0 +1,13 @@
+section div:nth-child(1), section div:nth-child(3){
+    padding: 50px;
+    color: rgb(34, 31, 31);
+    font-size: 50px;
+}
+
+section div:nth-child(1){
+    margin-top: 20px;
+}
+
+section div:nth-child(2){
+    width: 50%;
+}
